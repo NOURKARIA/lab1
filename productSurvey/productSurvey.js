@@ -17,8 +17,11 @@ function submitFeedback()
     document.getElementById('userInfo').style.display = 'block';  
     alert('Thank you for your valuable feedback')
 }
- const submitButton=document.getElementById('submitBtn');
-submitButton.onclick = submitFeedback;
+
+const submitButton = document.getElementById('submitBtn');
+    if (submitButton) {
+        submitButton.onclick = submitFeedback;
+    }
 document.addEventListener('keydown', function(event) {
    if (event.key === 'Enter') {
      submitFeedback();
